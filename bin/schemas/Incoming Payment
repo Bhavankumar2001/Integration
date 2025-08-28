@@ -1,0 +1,24 @@
+-- rever_raider.incoming_payment_table definition
+
+CREATE TABLE `incoming_payment_table` (
+  `incoming_id` int NOT NULL AUTO_INCREMENT,
+  `account_number` varchar(255) DEFAULT NULL,
+  `alert_sequence_no` varchar(255) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `cheque_no` varchar(255) DEFAULT NULL,
+  `created_at` datetime(6) DEFAULT NULL,
+  `debit_credit` varchar(255) DEFAULT NULL,
+  `is_sap_synced` bit(1) DEFAULT NULL,
+  `mnemonic_code` varchar(255) DEFAULT NULL,
+  `remitter_account` varchar(255) DEFAULT NULL,
+  `remitter_bank` varchar(255) DEFAULT NULL,
+  `remitter_ifsc` varchar(255) DEFAULT NULL,
+  `remitter_name` varchar(255) DEFAULT NULL,
+  `sap_synced_on` datetime(6) DEFAULT NULL,
+  `transaction_date` varchar(255) DEFAULT NULL,
+  `transaction_description` varchar(255) DEFAULT NULL,
+  `user_reference_number` varchar(255) DEFAULT NULL,
+  `value_date` varchar(255) DEFAULT NULL,
+  `virtual_account` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`incoming_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
